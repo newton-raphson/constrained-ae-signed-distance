@@ -7,7 +7,7 @@ experiment/*.npy
 experiment/images*
 experiment/*.out
 .DS_Store/
-# *.pkl
+
 *.pth
 *.log
 *.out

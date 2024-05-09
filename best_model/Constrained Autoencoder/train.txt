@@ -1,0 +1,7 @@
+[Settings]
+mode = train
+batch_size = 64
+learning_rate = 0.001
+epochs = 5000
+root_directory = /work/mech-ai-scratch/samundra/experiments/splinetofield/experiment
+save_path = /work/mech-ai-scratch/samundra/experiments/splinetofield/experiment/change_model

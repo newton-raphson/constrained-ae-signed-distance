@@ -32,5 +32,6 @@ conda activate spline
 
 ## Validation 
 ```validation```  folder contains dummy files to test the code for reproducibility
+## Notebooks
 
 

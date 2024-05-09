@@ -37,6 +37,9 @@ Following notebooks contain trainings for auto-encoder,vae and fcn-decoder<br>
 [FCN-Decoder](./notebooks/Dedicated_Decoder_V7b.ipynb)<br>
 [Auto-Encoder](./notebooks/Autoencoder_project.ipynb)<br>
 
+## Best Performing Model
+Best performing model are inside [BestModels](./best_model/)
+
 ## Courtesy
 Dr Soumik Sarkar
 ## Created by Engineering Image Analytics Group 1 

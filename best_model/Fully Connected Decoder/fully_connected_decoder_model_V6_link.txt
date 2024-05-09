@@ -1,0 +1,4 @@
+Fully Connected Decoder Model V6: lr= .01, batch size= 64
+
+
+link: https://drive.google.com/file/d/1IVd94b58EvsXB1wtLzwbvSHNt_qFmlW3/view?usp=drive_link

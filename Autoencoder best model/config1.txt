@@ -1,0 +1,7 @@
+[Settings]
+mode = test
+batch_size = 128
+learning_rate = 0.05
+epochs = 300
+root_directory = Downloads/
+save_path = Downloads/

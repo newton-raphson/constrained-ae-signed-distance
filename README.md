@@ -1,7 +1,7 @@
 <!-- The code is written with inspiration from Deep Learning in Production Book, adapted for PyTorch -->
-# Bijective mapping from sdf to spline 
+# SDF TO NURBS vice-versa
 
-This code is used for training and  testing the Bijective Mapping Between NURBS Curve and Signed Distance Field
+This code is used for training and  testing the mapping between signed distance and NURBS, vice-versa
 
 
 ## Requirements
@@ -21,7 +21,7 @@ conda activate spline
 ## Usage
 
 1. Create a ```lhs_ctrlpts.npy``` which contains the variation of the control points
-2. Run  script in ops/generate.py, a images2 file must be there ```python ops/generate.py --iteration_number val --total_iterations val ```.
+2. Similarly you need images2 file which contains corresponding signed distance field
 
 
 3. Run training script with ```python main.py $(pwd)/config.txt```. with "mode" set to train
@@ -33,5 +33,4 @@ conda activate spline
 ## Validation 
 ```validation```  folder contains dummy files to test the code for reproducibility
 
-## Visualization of Results
-![Result Visualization](test_results_visualization.gif)
+

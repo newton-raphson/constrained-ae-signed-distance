@@ -33,9 +33,9 @@ conda activate spline
 ## Validation 
 ```validation```  folder contains dummy files to test the code for reproducibility
 ## Notebooks
-Following notebooks contain trainings for auto-en
-[FCN-Decoder](./notebooks/Dedicated_Decoder_V7b.ipynb)
-[Auto-Encoder](./notebooks/Autoencoder_project.ipynb)
+Following notebooks contain trainings for auto-encoder,vae and fcn-decoder<br>
+[FCN-Decoder](./notebooks/Dedicated_Decoder_V7b.ipynb)<br>
+[Auto-Encoder](./notebooks/Autoencoder_project.ipynb)<br>
 
 ## Courtesy
 Dr Soumik Sarkar

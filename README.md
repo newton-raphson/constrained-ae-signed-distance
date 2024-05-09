@@ -36,6 +36,7 @@ conda activate spline
 Following notebooks contain trainings for auto-encoder,vae and fcn-decoder<br>
 [FCN-Decoder](./notebooks/Dedicated_Decoder_V7b.ipynb)<br>
 [Auto-Encoder](./notebooks/Autoencoder_project.ipynb)<br>
+As VAE has not performed well it has not been included.
 
 ## Best Performing Model
 Best performing model are inside [BestModels](./best_model/)

@@ -67,8 +67,6 @@ def train_func(batch_size,num_epochs,train_data_cp,train_data_sdf,test_data_cp,t
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = ConstrainedAutoEncoder(train_data_sdf[0][0].shape,latent_dim=16,output_size=128).to(device)
     print(count_parameters(model))
-    # model = VAE(train_data_cp.shape).to(device)
-    exit(1)
     custom_dataset = CustomDataset(train_data_cp, train_data_sdf,False)
     train_loader = DataLoader(dataset=custom_dataset, batch_size=batch_size, shuffle=True)
     if torch.cuda.device_count() > 1:
@@ -76,7 +74,7 @@ def train_func(batch_size,num_epochs,train_data_cp,train_data_sdf,test_data_cp,t
         model = torch.nn.DataParallel(model)
     model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
-    criterion = VAELoss()
+    criterion = CustomLoss()
     
     train(train_loader, model, optimizer, criterion, device,num_epochs,save_path,test_data_cp,test_data_sdf)
 

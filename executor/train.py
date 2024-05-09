@@ -105,8 +105,8 @@ def train(train_loader, model, optimizer, criterion, device,num_epochs,save_path
             # signed_distance_functions = batch['signed_distance_function'].unsqueeze(dim=1)
             # don't use the last control point for this test 
             control_points = control_points
-            recon_batch, mu, log_var = model(control_points)
-            loss = criterion(recon_batch, signed_distance_functions, mu, log_var)
+            predicted_sdf,ctrl_point= model(signed_distance_functions)
+            loss = criterion(predicted_sdf,signed_distance_functions,ctrl_point,control_point)
             loss.backward()
             optimizer.step()
             train_loss += loss.item()
@@ -122,8 +122,9 @@ def train(train_loader, model, optimizer, criterion, device,num_epochs,save_path
             for batch_idx, batch in enumerate(test_loader):
                 control_points = batch['control_point'].to(device)
                 signed_distance_functions = batch['signed_distance_function'].unsqueeze(dim=1).to(device)
-                recon_batch, mu, log_var = model(control_points)
-                loss = criterion(recon_batch, signed_distance_functions, mu, log_var)
+                control_points = control_points
+                predicted_sdf,ctrl_point= model(signed_distance_functions)
+                loss = criterion(predicted_sdf,signed_distance_functions,ctrl_point,control_point)
                 val_loss += loss.item()
                 del control_points
                 del signed_distance_functions
